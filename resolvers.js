@@ -2,10 +2,7 @@ const Post = require('./models/Post.model')
 
 const resolvers =  {
     Query: {
-        hello: () =>{
-            return "Hello world"
-        },
-        getAllPosts: async () =>{
+       getAllPosts: async () =>{
             return await Post.find()
         },
         getPost: async (_parent, args, _context, _info) => {
